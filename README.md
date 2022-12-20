@@ -5,7 +5,7 @@ This is a template for building a [Shopify app] using Node and React with Typesc
 ## What is the differences from [original](https://github.com/Shopify/shopify-app-template-node)?
 
 - Almost js files converted to ts
-- Add some dependencies
+- Add some packages
   - Eslint
   - Prettier
   - Types for existing packages
