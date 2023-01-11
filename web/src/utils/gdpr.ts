@@ -1,5 +1,6 @@
 import { DeliveryMethod } from "@shopify/shopify-api";
 import { WebhookHandlersParam } from "@shopify/shopify-app-express";
+import shopify from "./shopify.js";
 
 const GDPRWebhookHandlers: WebhookHandlersParam = {
   /**
@@ -79,6 +80,14 @@ const GDPRWebhookHandlers: WebhookHandlersParam = {
       //   "shop_id": 954889,
       //   "shop_domain": "{shop}.myshopify.com"
       // }
+
+      console.log(payload);
+      // Delete session
+      const sessions = await shopify.config.sessionStorage.findSessionsByShop(
+        payload.shop_domain
+      );
+      const sessionIds = sessions.map((session) => session.id);
+      await shopify.config.sessionStorage.deleteSessions(sessionIds);
     },
   },
 };
