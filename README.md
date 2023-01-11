@@ -1,6 +1,6 @@
-# Shopify App Template - Node with Typescript
+# Shopify App Template - NestJS
 
-This is a template for building a [Shopify app] using Node and React with Typescript.
+This is a template for building a [Shopify app] using NestJS and React with Typescript.
 
 ## What is the differences from [original](https://github.com/Shopify/shopify-app-template-node)?
 
