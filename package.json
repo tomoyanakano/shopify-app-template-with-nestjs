@@ -1,5 +1,5 @@
 {
-  "name": "shopify-typescript-template-node-typescript",
+  "name": "shopify-typescript-template-nestjs",
   "version": "1.0.0",
   "main": "web/index.js",
   "license": "UNLICENSED",
@@ -15,5 +15,5 @@
     "@shopify/app": "3.29.0",
     "@shopify/cli": "3.29.0"
   },
-  "author": "Tomoya Nakano@tomotomy"
+  "author": "Tomoya Nakano"
 }
