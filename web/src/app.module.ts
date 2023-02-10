@@ -5,7 +5,6 @@ import {
   RequestMethod,
 } from "@nestjs/common";
 import { ConfigModule } from "@nestjs/config";
-import { ServeStaticModule } from "@nestjs/serve-static";
 import { join } from "path";
 import shopify from "./utils/shopify.js";
 import { ProductModule } from "./product/product.module.js";
@@ -23,9 +22,6 @@ const STATIC_PATH =
     ProductModule,
     ConfigModule.forRoot({
       isGlobal: true,
-    }),
-    ServeStaticModule.forRoot({
-      rootPath: join(STATIC_PATH),
     }),
   ],
 })
