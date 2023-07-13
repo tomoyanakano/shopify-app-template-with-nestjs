@@ -12,7 +12,7 @@
     "deploy": "shopify app deploy"
   },
   "dependencies": {
-    "@shopify/app": "3.29.0",
+    "@shopify/app": "3.47.5",
     "@shopify/cli": "3.29.0"
   },
   "author": "Tomoya Nakano"
