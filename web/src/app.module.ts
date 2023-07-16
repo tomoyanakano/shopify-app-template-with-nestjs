@@ -32,10 +32,12 @@ export class AppModule implements NestModule {
       path: shopify.config.auth.path,
       method: RequestMethod.GET,
     });
-    consumer.apply(shopify.auth.callback()).forRoutes({
-      path: shopify.config.auth.callbackPath,
-      method: RequestMethod.GET,
-    });
+    consumer
+      .apply(shopify.auth.callback(), shopify.redirectToShopifyOrAppRoot())
+      .forRoutes({
+        path: shopify.config.auth.callbackPath,
+        method: RequestMethod.GET,
+      });
 
     // Validate Authenticated Session Middleware for Backend Routes
     consumer
