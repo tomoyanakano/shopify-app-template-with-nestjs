@@ -1,12 +1,12 @@
 import {
-  Card,
+  LegacyCard,
   Page,
   Layout,
-  TextContainer,
   Image,
-  Stack,
+  LegacyStack,
   Link,
-  Heading,
+  VerticalStack,
+  Text,
 } from '@shopify/polaris'
 import { TitleBar } from '@shopify/app-bridge-react'
 
@@ -20,30 +20,35 @@ export default function HomePage() {
       <TitleBar title="App name" primaryAction={null} />
       <Layout>
         <Layout.Section>
-          <Card sectioned>
-            <Stack
+          <LegacyCard sectioned>
+            <LegacyStack
               wrap={false}
               spacing="extraTight"
               distribution="trailing"
               alignment="center"
             >
-              <Stack.Item fill>
-                <TextContainer spacing="loose">
-                  <Heading>Nice work on building a Shopify app 🎉</Heading>
+              <LegacyStack.Item fill>
+                <VerticalStack gap="5">
+                  <Text variant="headingMd" as="h2">
+                    Nice work on building a Shopify app 🎉
+                  </Text>
                   <p>
                     Your app is ready to explore! It contains everything you
                     need to get started including the{' '}
-                    <Link url="https://polaris.shopify.com/" external>
+                    <Link url="https://polaris.shopify.com/" target="_blank">
                       Polaris design system
                     </Link>
                     ,{' '}
-                    <Link url="https://shopify.dev/api/admin-graphql" external>
+                    <Link
+                      url="https://shopify.dev/api/admin-graphql"
+                      target="_blank"
+                    >
                       Shopify Admin API
                     </Link>
                     , and{' '}
                     <Link
                       url="https://shopify.dev/apps/tools/app-bridge"
-                      external
+                      target="_blank"
                     >
                       App Bridge
                     </Link>{' '}
@@ -57,15 +62,15 @@ export default function HomePage() {
                     Learn more about building out your app in{' '}
                     <Link
                       url="https://shopify.dev/apps/getting-started/add-functionality"
-                      external
+                      target="_blank"
                     >
                       this Shopify tutorial
                     </Link>{' '}
                     📚{' '}
                   </p>
-                </TextContainer>
-              </Stack.Item>
-              <Stack.Item>
+                </VerticalStack>
+              </LegacyStack.Item>
+              <LegacyStack.Item>
                 <div style={{ padding: '0 20px' }}>
                   <Image
                     source={trophyImage}
@@ -73,9 +78,9 @@ export default function HomePage() {
                     width={120}
                   />
                 </div>
-              </Stack.Item>
-            </Stack>
-          </Card>
+              </LegacyStack.Item>
+            </LegacyStack>
+          </LegacyCard>
         </Layout.Section>
         <Layout.Section>
           <ProductsCard />

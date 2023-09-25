@@ -1,11 +1,11 @@
-import { Card, EmptyState, Page } from '@shopify/polaris'
+import { LegacyCard, EmptyState, Page } from '@shopify/polaris'
 import { notFoundImage } from '../assets'
 
 export default function NotFound() {
   return (
     <Page>
-      <Card>
-        <Card.Section>
+      <LegacyCard>
+        <LegacyCard.Section>
           <EmptyState
             heading="There is no page at this address"
             image={notFoundImage}
@@ -15,8 +15,8 @@ export default function NotFound() {
               you need.
             </p>
           </EmptyState>
-        </Card.Section>
-      </Card>
+        </LegacyCard.Section>
+      </LegacyCard>
     </Page>
   )
 }
