@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "@shopify/app": "3.48.1",
-    "@shopify/cli": "3.48.1"
+    "@shopify/cli": "3.49.3"
   },
   "author": "Tomoya Nakano"
 }
