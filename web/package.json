@@ -19,7 +19,7 @@
     "@nestjs/platform-express": "^10.0.5",
     "@nestjs/serve-static": "^4.0.0",
     "@shopify/shopify-api": "^8.1.1",
-    "@shopify/shopify-app-express": "^3.0.2",
+    "@shopify/shopify-app-express": "^4.0.0",
     "@shopify/shopify-app-session-storage-sqlite": "^2.0.3",
     "class-transformer": "^0.5.1",
     "class-validator": "^0.14.0",
