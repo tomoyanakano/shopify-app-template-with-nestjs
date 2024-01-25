@@ -22,14 +22,11 @@ export class ProductService {
 
     try {
       for (let i = 0; i < count; i++) {
-        await client.query({
-          data: {
-            query: CREATE_PRODUCTS_MUTATION,
-            variables: {
-              input: {
-                title: `${this.randomTitle()}`,
-                variants: [{ price: this.randomPrice() }],
-              },
+        await client.request(CREATE_PRODUCTS_MUTATION, {
+          variables: {
+            input: {
+              title: `${this.randomTitle()}`,
+              variants: [{ price: this.randomPrice() }],
             },
           },
         });
